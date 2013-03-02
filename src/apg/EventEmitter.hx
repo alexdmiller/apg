@@ -16,11 +16,11 @@ class EventEmitter {
 
   public static function startTracking() : Void {
     tracking = true;
-    // var emitterItem : ContextMenuItem =
-    //     new ContextMenuItem("Trace Emitters", true);
-    // emitterItem.addEventListener(ContextMenuEvent.MENU_ITEM_SELECT,
-    //     onTraceEmittersSelected);
-    // flash.Lib.current.contextMenu.customItems.push(emitterItem);
+    var emitterItem : ContextMenuItem =
+        new ContextMenuItem("Trace Emitters", true);
+    emitterItem.addEventListener(ContextMenuEvent.MENU_ITEM_SELECT,
+        onTraceEmittersSelected);
+    flash.Lib.current.contextMenu.customItems.push(emitterItem);
   }
 
   private static function onTraceEmittersSelected(event : ContextMenuEvent) : Void {

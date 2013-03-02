@@ -1,7 +1,7 @@
 package apg.game;
 
 /**
- * @todo make this conform to haxe standards
+ *  An implementation of PhysicalModel that provides dead-simple physics.
  */  
 class SimplePhysicalModel implements PhysicalModel {
   private var _x : Float;

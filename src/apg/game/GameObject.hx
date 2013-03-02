@@ -49,6 +49,9 @@ class GameObject extends EventEmitter {
    **/
   public var angle(getAngle, setAngle) : Float;
   
+  /**
+   *  The parent board.
+   */
   public var board(default, default) : GameBoard;
   
   /**
@@ -89,6 +92,10 @@ class GameObject extends EventEmitter {
     model = new SimplePhysicalModel();
   }
 
+  /**
+   *  Removes all behaviors, listeners, and other references. Meant to help
+   *  the Flash garbage collector.
+   */
   public function clean() {
     dead = true;
     board = null;
